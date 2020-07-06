@@ -4,8 +4,6 @@ The Polarity FireEye Detection on Demand (DoD) integration allows Polarity to qu
 
 <img src="./assets/overlay.png" width="50%">  
 
-> The FireEye DoD endpoint is limited to 200 hash lookups per minute.
-
 For more information about FireEye's Detection on Demand capability please see: https://www.fireeye.com/solutions/detection-on-demand.html
 
 For information on the FireEye DoD API please see: https://fireeye.dev/apis/
