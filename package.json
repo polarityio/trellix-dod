@@ -1,0 +1,10 @@
+{
+  "main": "./integration.js",
+  "name": "FireEye_DoD",
+  "version": "3.0.2-beta",
+  "private": true,
+  "dependencies": {
+    "request": "^2.88",
+    "async": "^3.2.0"
+  }
+}

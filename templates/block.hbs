@@ -1,0 +1,216 @@
+  <h1 class="p-title">
+    {{fa-icon "database" fixedWidth=true}} Cache Lookup
+  </h1>
+
+  {{#if details.engine_results.cache_lookup.sha256}}
+    <div>
+        <span class="p-key">SHA256: </span>
+        <span class="p-value">{{details.engine_results.cache_lookup.sha256}}</span>
+    </div>
+  {{/if}}
+
+  {{#if details.engine_results.cache_lookup.signature_name}}
+    <div>
+      <span class="p-key">Signature Names:</span>
+    </div>
+    <div>
+        {{#each details.engine_results.cache_lookup.signature_name as |name| }}
+            <span class="tag">{{name}}</span>
+        {{/each}}
+    </div>
+  {{/if}}
+
+  {{#if details.engine_results.cache_lookup.verdict}}
+    {{#if (eq details.engine_results.cache_lookup.verdict "malicious")}}
+      <div>
+        <span class="p-key">Verdict:</span>
+        <span class="p-value" style="color:red">MALICIOUS</span>
+      </div>
+    {{/if}}
+    {{#if (eq details.engine_results.cache_lookup.verdict "not_found")}}
+      <div>
+        <span class="p-key">Verdict:</span>
+        <span class="p-value">NOT FOUND</span>
+      </div>
+    {{/if}}
+  {{/if}}
+
+  {{#if details.engine_results.cache_lookup.weight}}
+    <div>
+        <span class="p-key">Weight: </span>
+        <span class="p-value">{{details.engine_results.cache_lookup.weight}}</span>
+    </div>
+  {{/if}}
+
+  <h1 class="p-title">
+    {{fa-icon "microscope" fixedWidth=true}} Dynamic Analysis
+  </h1>
+
+  {{#if details.engine_results.dynamic_analysis.verdict}}
+    {{#if (eq details.engine_results.dynamic_analysis.verdict "malicious")}}
+      <div>
+        <span class="p-key">Verdict:</span>
+        <span class="p-value" style="color:red">MALICIOUS</span>
+      </div>
+    {{/if}}
+    {{#if (eq details.engine_results.dynamic_analysis.verdict "not_found")}}
+      <div>
+        <span class="p-key">Verdict:</span>
+        <span class="p-value">NOT FOUND</span>
+      </div>
+    {{/if}}
+  {{/if}}
+
+  <h1 class="p-title">
+    {{fa-icon "shield-virus" fixedWidth=true}} A/V Lookup
+  </h1>
+
+  {{#if details.engine_results.av_lookup.signature_name}}
+    <div>
+      <span class="p-key">Signature Names:</span>
+    </div>
+    <div>
+        {{#each details.engine_results.av_lookup.signature_name as |name| }}
+            <span class="tag">{{name}}</span>
+        {{/each}}
+    </div>
+  {{/if}}
+
+  {{#if details.engine_results.av_lookup.verdict}}
+    {{#if (eq details.engine_results.av_lookup.verdict "malicious")}}
+      <div>
+        <span class="p-key">Verdict:</span>
+        <span class="p-value" style="color:red">MALICIOUS</span>
+      </div>
+    {{/if}}
+    {{#if (eq details.engine_results.av_lookup.verdict "not_found")}}
+      <div>
+        <span class="p-key">Verdict:</span>
+        <span class="p-value">NOT FOUND</span>
+      </div>
+    {{/if}}
+  {{/if}}
+
+  {{#if details.engine_results.av_lookup.first_seen}}
+    <div>
+        <span class="p-key">First Seen: </span>
+        <span class="p-value">{{details.engine_results.av_lookup.first_seen}}</span>
+    </div>
+  {{/if}}
+
+  {{#if details.engine_results.av_lookup.last_seen}}
+    <div>
+        <span class="p-key">Last Seen: </span>
+        <span class="p-value">{{details.engine_results.av_lookup.last_seen}}</span>
+    </div>
+  {{/if}}
+
+  {{#if details.engine_results.av_lookup.scan_count}}
+    <div>
+        <span class="p-key">Scan Count: </span>
+        <span class="p-value">{{details.engine_results.av_lookup.scan_count}}</span>
+    </div>
+  {{/if}}
+
+  {{#if details.engine_results.av_lookup.scan_match}}
+    <div>
+        <span class="p-key">Scan Match: </span>
+        <span class="p-value">{{details.engine_results.av_lookup.scan_match}}</span>
+    </div>
+  {{/if}}
+
+  <h1 class="p-title">
+    {{fa-icon "shield-alt" fixedWidth=true}} AVS Lookup
+  </h1>
+
+  {{#if details.engine_results.avs_lookup.signature_name}}
+    <div>
+      <span class="p-key">Signature Names:</span>
+    </div>
+    <div>
+        {{#each details.engine_results.avs_lookup.signature_name as |name| }}
+            <span class="tag">{{name}}</span>
+        {{/each}}
+    </div>
+  {{/if}}
+
+  {{#if details.engine_results.avs_lookup.verdict}}
+    {{#if (eq details.engine_results.avs_lookup.verdict "malicious")}}
+      <div>
+        <span class="p-key">Verdict:</span>
+        <span class="p-value" style="color:red">MALICIOUS</span>
+      </div>
+    {{/if}}
+    {{#if (eq details.engine_results.avs_lookup.verdict "not_found")}}
+      <div>
+        <span class="p-key">Verdict:</span>
+        <span class="p-value">NOT FOUND</span>
+      </div>
+    {{/if}}
+  {{/if}}
+
+  {{#if details.engine_results.avs_lookup.first_seen}}
+    <div>
+        <span class="p-key">First Seen: </span>
+        <span class="p-value">{{details.engine_results.avs_lookup.first_seen}}</span>
+    </div>
+  {{/if}}
+
+  {{#if details.engine_results.avs_lookup.last_seen}}
+    <div>
+        <span class="p-key">Last Seen: </span>
+        <span class="p-value">{{details.engine_results.avs_lookup.last_seen}}</span>
+    </div>
+  {{/if}}
+
+  <h1 class="p-title">
+    {{fa-icon "brain" fixedWidth=true}} DTI Lookup
+  </h1>
+
+  {{#if details.engine_results.dti_lookup.verdict}}
+    {{#if (eq details.engine_results.dti_lookup.verdict "malicious")}}
+      <div>
+        <span class="p-key">Verdict:</span>
+        <span class="p-value" style="color:red">MALICIOUS</span>
+      </div>
+    {{/if}}
+    {{#if (eq details.engine_results.dti_lookup.verdict "not_found")}}
+      <div>
+        <span class="p-key">Verdict:</span>
+        <span class="p-value">NOT FOUND</span>
+      </div>
+    {{/if}}
+    {{#if details.engine_results.dti_lookup.first_seen}}
+      <div>
+        <span class="p-key">First Seen:</span>
+        <span class="p-value">{{details.engine_results.dti_lookup.first_seen}}</span>
+      </div>
+    {{/if}}
+    {{#if details.engine_results.dti_lookup.industry}}
+      <div>
+        {{#each details.engine_results.dti_lookup.industry as |industry| }}
+          <span class="tag">{{industry}}</span>
+        {{/each}}
+      </div>
+    {{/if}}
+    {{#if details.engine_results.dti_lookup.overall_weight}}
+      <div>
+        <span class="p-key">Overall Weight:</span>
+        <span class="p-value">{{details.engine_results.dti_lookup.overall_weight}}</span>
+      </div>
+    {{/if}}
+    {{#if details.engine_results.dti_lookup.display_message}}
+      <div>
+        {{#each details.engine_results.dti_lookup.display_message as |message| }}
+          <span class="tag">{{message}}</span>
+        {{/each}}
+      </div>
+    {{/if}}
+    {{#if details.engine_results.dti_lookup.signature_name}}
+      <div>
+        {{#each details.engine_results.dti_lookup.signature_name as |name| }}
+          <span class="tag">{{name}}</span>
+        {{/each}}
+      </div>
+    {{/if}}
+  {{/if}}
