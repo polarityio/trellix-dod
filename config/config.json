@@ -1,0 +1,42 @@
+{
+  "name": "FireEye Detection on Demand (DoD)",
+  "acronym": "FEYE",
+  "onDemandOnly": true,
+  "description": "Identify malicious files based on MD5 hash using the FireEye Detection On Demand threat detection service.",
+  "entityTypes": [
+    "MD5"
+  ],
+  "styles": [
+    "./styles/style.less"
+  ],
+  "block": {
+    "component": {
+      "file": "./components/block.js"
+    },
+    "template": {
+      "file": "./templates/block.hbs"
+    }
+  },
+  "request": {
+    "cert": "",
+    "key": "",
+    "passphrase": "",
+    "ca": "",
+    "proxy": "",
+    "rejectUnauthorized": true
+  },
+  "logging": {
+    "level": "info"
+  },
+  "options": [
+    {
+      "key": "apiKey",
+      "name": "API Key",
+      "description": "Valid FireEye Detection On Demand API Key",
+      "default": "",
+      "type": "password",
+      "userCanEdit": true,
+      "adminOnly": false
+    }
+  ]
+}
