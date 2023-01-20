@@ -3,12 +3,9 @@
   "acronym": "FEYE",
   "onDemandOnly": true,
   "description": "Identify malicious files based on MD5 hash using the FireEye Detection On Demand threat detection service.",
-  "entityTypes": [
-    "MD5"
-  ],
-  "styles": [
-    "./styles/style.less"
-  ],
+  "entityTypes": ["MD5"],
+  "defaultColor": "light-pink",
+  "styles": ["./styles/style.less"],
   "block": {
     "component": {
       "file": "./components/block.js"
