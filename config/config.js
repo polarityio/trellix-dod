@@ -26,6 +26,7 @@ module.exports = {
   description:
     'Identify malicious files based on MD5 hash using the FireEye Detection On Demand threat detection service.',
   entityTypes: ['md5'],
+  defaultColor: 'light-pink',
   /**
    * Provide custom component logic and template for rendering the integration details block.  If you do not
    * provide a custom template and/or component then the integration will display data as a table of key value
