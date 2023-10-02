@@ -25,7 +25,7 @@ module.exports = {
    */
   description:
     'Identify malicious files based on MD5 hash using the Trellix Detection On Demand threat detection service.',
-  entityTypes: ['md5'],
+  entityTypes: ['MD5'],
   defaultColor: 'light-pink',
   /**
    * Provide custom component logic and template for rendering the integration details block.  If you do not
@@ -59,7 +59,7 @@ module.exports = {
     ca: '',
     // An HTTP proxy to be used. Supports proxy Auth with Basic Auth, identical to support for
     // the url parameter (by embedding the auth info in the uri)
-    proxy: ""
+    proxy: ''
   },
   logging: {
     level: 'info' //trace, debug, info, warn, error, fatal
