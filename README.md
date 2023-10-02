@@ -1,4 +1,4 @@
-# Polarity Trellix Detection on Demand (DoD) Integration
+# Polarity Trellix (prev. FireEye) Detection on Demand (DoD) Integration
 
 The Polarity Trellix Detection on Demand (DoD) integration allows Polarity to quickly identify malicious files contained within the Trellix platform.  The Trellix DoD service only supports looking up MD5 hashes.
 
