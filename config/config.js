@@ -5,7 +5,7 @@ module.exports = {
    * @type String
    * @required
    */
-  name: 'FireEye Detection on Demand (DoD)',
+  name: 'Trellix Detection on Demand (DoD)',
   /**
    * The acronym that appears in the notification window when information from this integration
    * is displayed.  Note that the acronym is included as part of each "tag" in the summary information
@@ -15,7 +15,7 @@ module.exports = {
    * @type String
    * @required
    */
-  acronym: 'FEYE',
+  acronym: 'TRLX',
   onDemandOnly: true,
   /**
    * Description for this integration which is displayed in the Polarity integrations user interface
@@ -24,8 +24,8 @@ module.exports = {
    * @optional
    */
   description:
-    'Identify malicious files based on MD5 hash using the FireEye Detection On Demand threat detection service.',
-  entityTypes: ['md5'],
+    'Identify malicious files based on MD5 hash using the Trellix Detection On Demand threat detection service.',
+  entityTypes: ['MD5'],
   defaultColor: 'light-pink',
   /**
    * Provide custom component logic and template for rendering the integration details block.  If you do not
@@ -59,7 +59,7 @@ module.exports = {
     ca: '',
     // An HTTP proxy to be used. Supports proxy Auth with Basic Auth, identical to support for
     // the url parameter (by embedding the auth info in the uri)
-    proxy: ""
+    proxy: ''
   },
   logging: {
     level: 'info' //trace, debug, info, warn, error, fatal
@@ -68,7 +68,7 @@ module.exports = {
     {
       key: 'apiKey',
       name: 'API Key',
-      description: 'Valid FireEye Detection On Demand API Key',
+      description: 'Valid Trellix Detection On Demand API Key',
       default: '',
       type: 'password',
       userCanEdit: true,
